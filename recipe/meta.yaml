@@ -23,6 +23,7 @@ requirements:
     - python >=3.8
     - cdsapi >=0.6.1
     - ecape >=0.1.1
+    - ecape-parcel >=1.2.0.2
     - matplotlib-base >=3.3.0,<=3.7.1
     - metpy >=1.5.1
     - netcdf4 >=1.6.4
