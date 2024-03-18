@@ -1,5 +1,5 @@
 {% set name = "sounderpy" %}
-{% set version = "3.0.1" %}
+{% set version = "3.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sounderpy-{{ version }}.tar.gz
-  sha256: 7f6ec305902973167da1d7f7ecc9c2edd05e8293e8887a6414a921a3ab2c652a
+  sha256: 1390d450d48a93c481093c792e834b2557253c6dd8b4f6b3498b36ec8812fb61
 
 build:
   noarch: python
@@ -21,8 +21,10 @@ requirements:
     - pip
   run:
     - python >=3.8
+    - arm_pyart >=1.16.1
     - cdsapi >=0.6.1
     - ecape >=0.1.1
+    - ecape-parcel >=1.2.0.2
     - matplotlib-base >=3.3.0,<=3.7.1
     - metpy >=1.5.1
     - netcdf4 >=1.6.4
