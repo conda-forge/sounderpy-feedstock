@@ -21,6 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.8
+    - arm_pyart >=1.16.1
     - cdsapi >=0.6.1
     - ecape >=0.1.1
     - ecape-parcel >=1.2.0.2
