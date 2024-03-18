@@ -1,5 +1,5 @@
 {% set name = "sounderpy" %}
-{% set version = "3.0.1" %}
+{% set version = "3.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sounderpy-{{ version }}.tar.gz
-  sha256: 7f6ec305902973167da1d7f7ecc9c2edd05e8293e8887a6414a921a3ab2c652a
+  sha256: 1390d450d48a93c481093c792e834b2557253c6dd8b4f6b3498b36ec8812fb61
 
 build:
   noarch: python
