@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -25,7 +25,7 @@ requirements:
     - cdsapi >=0.6.1
     - ecape >=0.1.1
     - ecape-parcel >=1.2.0.2
-    - matplotlib-base >=3.3.0,<=3.7.1
+    - matplotlib-base >=3.3.0
     - metpy >=1.5.1
     - netcdf4 >=1.6.4
     - numpy >=1.20.0
