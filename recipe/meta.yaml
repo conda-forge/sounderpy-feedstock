@@ -49,7 +49,7 @@ about:
   home: https://kylejgillett.github.io/sounderpy/
   dev_url: https://github.com/kylejgillett/sounderpy
   license: MIT
-  license_file: LICENSE
+  license_file: LICENSES
 
 extra:
   recipe-maintainers:
