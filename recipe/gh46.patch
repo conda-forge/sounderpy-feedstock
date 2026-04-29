@@ -1,0 +1,21 @@
+commit f2322f1744d412186b8cdf82f6a2359d9016225d
+Author: akrherz <akrherz@iastate.edu>
+Date:   Tue Apr 7 19:56:45 2026 -0500
+
+    bld: Update pyproject src include directive #46
+
+diff --git a/pyproject.toml b/pyproject.toml
+index 7cfa85f..34e42ab 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -45,8 +45,9 @@ dependencies = [
+ "PyPi" = "https://pypi.org/project/sounderpy/"
+ "My Website" = "https://kylegillettphoto.com"
+ 
++
+ [tool.setuptools]
+-packages = ["sounderpy"]
++packages = { find = { where = ["src"] } }
+ package-dir = {"" = "src"}
+ 
+ [tool.setuptools.package-data]
