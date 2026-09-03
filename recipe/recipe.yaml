@@ -1,26 +1,29 @@
-{% set name = "sounderpy" %}
-{% set version = "3.2.0" %}
+schema_version: 1
+
+context:
+  name: sounderpy
+  version: "3.2.0"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://github.com/kylejgillett/sounderpy/archive/refs/tags/v{{ version }}.tar.gz
+  url: https://github.com/kylejgillett/sounderpy/archive/refs/tags/v${{ version }}.tar.gz
   sha256: e5a968334d5c78dce3862e53e86667057abf431448656cf8bf674e64edd9cabf
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - setuptools >=68.0
     - pip
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - arm_pyart >=1.16.1
     - cartopy >=0.21.0
     - cdsapi >=0.7.3
@@ -35,21 +38,21 @@ requirements:
     - scipy >=1.10.1
     - xarray >=0.18.0
 
-test:
-  imports:
-    - sounderpy
-  commands:
-    - pip check
-  requires:
-    - python {{ python_min }}
-    - pip
+tests:
+  - python:
+      imports:
+        - sounderpy
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
 
 about:
   summary: Vertical Profile Data Retrieval and Analysis Tool For Python
-  home: https://kylejgillett.github.io/sounderpy/
-  dev_url: https://github.com/kylejgillett/sounderpy
   license: MIT
   license_file: LICENSES
+  homepage: https://kylejgillett.github.io/sounderpy/
+  repository: https://github.com/kylejgillett/sounderpy
 
 extra:
   recipe-maintainers:
