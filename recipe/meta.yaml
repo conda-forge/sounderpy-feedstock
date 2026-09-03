@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/kylejgillett/sounderpy/archive/refs/tags/v{{ version }}.tar.gz
   sha256: e5a968334d5c78dce3862e53e86667057abf431448656cf8bf674e64edd9cabf
-  patches:
-    - gh46.patch
 
 build:
   noarch: python
