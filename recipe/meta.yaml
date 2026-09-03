@@ -1,5 +1,5 @@
 {% set name = "sounderpy" %}
-{% set version = "3.1.0" %}
+{% set version = "3.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/kylejgillett/sounderpy/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d5492c244913f7a590927be086a88e79f377ec2f632aa07c655b4b199a6134eb
+  sha256: e5a968334d5c78dce3862e53e86667057abf431448656cf8bf674e64edd9cabf
   patches:
     - gh46.patch
 
