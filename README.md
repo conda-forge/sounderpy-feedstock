@@ -18,7 +18,9 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://github.com/conda-forge/sounderpy-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/sounderpy-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
     </td>
   </tr>
 </table>
@@ -40,31 +42,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `sounderpy` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install sounderpy
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install sounderpy
 ```
 
-It is possible to list all of the versions of `sounderpy` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add sounderpy
+# for installing globally
+pixi global install sounderpy
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `sounderpy` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search sounderpy --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search sounderpy --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search sounderpy --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -76,6 +120,8 @@ mamba repoquery whoneeds sounderpy --channel conda-forge
 # List dependencies of `sounderpy`:
 mamba repoquery depends sounderpy --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
