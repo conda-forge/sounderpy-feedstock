@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: sounderpy
-  version: "3.2.0"
+  version: "3.3.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/kylejgillett/sounderpy/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: e5a968334d5c78dce3862e53e86667057abf431448656cf8bf674e64edd9cabf
+  sha256: cbd41a3e8b3df04f659652b9df03b9b06c672d0df86ef6effc2950295d27216d
 
 build:
   number: 0
